@@ -38,4 +38,13 @@ class LinkedList {
     this.count--;
     return current.element;
   }
+
+  getElementAt(index) {
+    if (index < 0 || index > this.count) return undefined;
+    let node = this.head;
+    for (let i = 0; i < index && node != null; i++) {
+      node = node.next;
+    }
+    return node;
+  }
 }
