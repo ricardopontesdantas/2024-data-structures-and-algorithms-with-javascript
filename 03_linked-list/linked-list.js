@@ -1,5 +1,5 @@
-import { Node } from "../models";
-import { defaultEquals } from "../util";
+const { Node } = require("../models");
+const { defaultEquals } = require("../util");
 
 class LinkedList {
   constructor(equalsFn = defaultEquals) {
