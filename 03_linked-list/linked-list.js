@@ -1,4 +1,4 @@
-const { Node } = require("../models");
+const { LinkedListNode } = require("../models");
 const { defaultEquals } = require("../util");
 
 class LinkedList {
@@ -9,7 +9,7 @@ class LinkedList {
   }
 
   push(element) {
-    const node = new Node(element);
+    const node = new LinkedListNode(element);
     if (this.head == null) {
       this.head = node;
     } else {
@@ -47,7 +47,7 @@ class LinkedList {
 
   insert(element, index) {
     if (index < 0 || index > this.count) return false;
-    const node = new Node(element);
+    const node = new LinkedListNode(element);
     let current = this.head;
     if (index === 0) {
       node.next = current;
