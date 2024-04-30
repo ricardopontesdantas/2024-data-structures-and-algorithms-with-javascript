@@ -71,3 +71,5 @@ class Dictionary {
     return objString;
   }
 }
+
+module.exports = Dictionary;
