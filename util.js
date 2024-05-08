@@ -19,4 +19,25 @@ function defaultCompare(a, b) {
   return a < b ? Compare.LESS_THAN : Compare.BIGGER_THAN;
 }
 
-module.exports = { defaultEquals, defaultToString, Compare, defaultCompare };
+const Colors = {
+  WHITE: 0,
+  GRAY: 1,
+  BLACK: 2,
+};
+
+const initializeColor = (vertices) => {
+  const color = {};
+  for (let i = 0; i < vertices.length; i++) {
+    color[vertices[i]] = Colors.WHITE;
+  }
+  return color;
+};
+
+module.exports = {
+  defaultEquals,
+  defaultToString,
+  Compare,
+  defaultCompare,
+  Colors,
+  initializeColor,
+};
