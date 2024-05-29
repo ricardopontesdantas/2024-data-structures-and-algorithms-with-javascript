@@ -1,5 +1,8 @@
 const Dictionary = require("../05_dictionary/dictionary");
-const { breadthFirstSearch } = require("../search-algorithms");
+const {
+  breadthFirstSearch,
+  depthFirstSearch,
+} = require("../search-algorithms");
 
 class Graph {
   constructor(isDirected = false) {
