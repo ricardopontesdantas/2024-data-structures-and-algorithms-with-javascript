@@ -33,6 +33,18 @@ const initializeColor = (vertices) => {
   return color;
 };
 
+function swap(array, a, b) {
+  [array[a], array[b]] = [array[b], array[a]];
+}
+
+function createNonSortedArray(size) {
+  const array = [];
+  for (let i = size; i > 0; i--) {
+    array.push(i);
+  }
+  return array;
+}
+
 module.exports = {
   defaultEquals,
   defaultToString,
@@ -40,4 +52,6 @@ module.exports = {
   defaultCompare,
   Colors,
   initializeColor,
+  swap,
+  createNonSortedArray,
 };
