@@ -1,8 +1,5 @@
 const Dictionary = require("../05_dictionary/dictionary");
-const {
-  breadthFirstSearch,
-  depthFirstSearch,
-} = require("../search-algorithms");
+const { breadthFirstSearch, depthFirstSearch } = require("./search-algorithms");
 
 class Graph {
   constructor(isDirected = false) {
@@ -46,3 +43,23 @@ class Graph {
     return objString;
   }
 }
+
+const graph = new Graph();
+const myVertices = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+for (const vertex of myVertices) {
+  graph.addVertex(vertex);
+}
+graph.addEdge("A", "B");
+graph.addEdge("A", "C");
+graph.addEdge("A", "D");
+graph.addEdge("C", "D");
+graph.addEdge("C", "G");
+graph.addEdge("D", "G");
+graph.addEdge("D", "H");
+graph.addEdge("B", "E");
+graph.addEdge("B", "F");
+graph.addEdge("E", "I");
+
+const printVertex = (value) => console.log(`Visited vertex: ${value}`);
+breadthFirstSearch(graph, myVertices[0], printVertex);
+depthFirstSearch(graph, printVertex);
