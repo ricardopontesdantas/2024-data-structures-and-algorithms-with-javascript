@@ -1,5 +1,5 @@
-const Queue = require("./02_queue/queue");
-const { initializeColor, Colors } = require("./util");
+const Queue = require("../02_queue/queue");
+const { initializeColor, Colors } = require("../util");
 
 const breadthFirstSearch = (graph, startVertex, callback) => {
   const vertices = graph.getVertices();
