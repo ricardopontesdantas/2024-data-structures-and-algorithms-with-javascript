@@ -46,4 +46,3 @@ class Graph {
     return objString;
   }
 }
-
