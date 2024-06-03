@@ -1,9 +1,4 @@
-const {
-  defaultCompare,
-  Compare,
-  swap,
-  createNonSortedArray,
-} = require("../util");
+const { defaultCompare, Compare, createNonSortedArray } = require("../util");
 
 function insertionSort(array, compareFn = defaultCompare) {
   const { length } = array;
