@@ -45,6 +45,22 @@ function createNonSortedArray(size) {
   return array;
 }
 
+function findMaxValue(array) {
+  let max = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > max) max = array[i];
+  }
+  return max;
+}
+
+function findMinValue(array) {
+  let min = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < min) min = array[i];
+  }
+  return min;
+}
+
 module.exports = {
   defaultEquals,
   defaultToString,
@@ -54,4 +70,6 @@ module.exports = {
   initializeColor,
   swap,
   createNonSortedArray,
+  findMaxValue,
+  findMinValue,
 };
