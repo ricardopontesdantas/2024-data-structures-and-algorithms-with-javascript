@@ -14,7 +14,9 @@ function insertionSort(array, compareFn = defaultCompare) {
   }
 }
 
-const array = createNonSortedArray(10);
-console.log(array.join());
-insertionSort(array);
-console.log(array.join());
+module.exports = insertionSort;
+
+// const array = createNonSortedArray(10);
+// console.log(array.join());
+// insertionSort(array);
+// console.log(array.join());
