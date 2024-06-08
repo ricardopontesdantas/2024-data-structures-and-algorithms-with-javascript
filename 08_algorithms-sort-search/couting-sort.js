@@ -1,4 +1,4 @@
-const { createNonSortedArray } = require("../util");
+const { createNonSortedArray, findMaxValue } = require("../util");
 
 function countingSort(array) {
   if (array.length < 2) return array;
@@ -18,14 +18,6 @@ function countingSort(array) {
     }
   });
   return array;
-}
-
-function findMaxValue(array) {
-  let max = array[0];
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] > max) max = array[i];
-  }
-  return max;
 }
 
 const array = createNonSortedArray(10);
