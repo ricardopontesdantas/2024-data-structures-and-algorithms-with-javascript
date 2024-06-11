@@ -39,7 +39,9 @@ function partition(array, left, right, compareFn) {
   return i;
 }
 
-const array = createNonSortedArray(10);
-console.log(array.join());
-quickSort(array);
-console.log(array.join());
+module.exports = quickSort;
+
+// const array = createNonSortedArray(10);
+// console.log(array.join());
+// quickSort(array);
+// console.log(array.join());
