@@ -1,7 +1,10 @@
-const { defaultCompare, Compare } = require("../util");
+const {
+  defaultCompare,
+  Compare,
+  lesserOrEquals,
+  DOES_NOT_EXIST,
+} = require("../util");
 const quickSort = require("./quick-sort");
-
-const DOES_NOT_EXIST = -1;
 
 function binarySearch(array, value, compareFn = defaultCompare) {
   const sortedArray = quickSort(array);
@@ -19,11 +22,6 @@ function binarySearch(array, value, compareFn = defaultCompare) {
     }
   }
   return DOES_NOT_EXIST;
-}
-
-function lesserOrEquals(a, b, compareFn) {
-  const comp = compareFn(a, b);
-  return comp === Compare.LESS_THAN || comp === Compare.EQUALS;
 }
 
 const array = [1, 2, 3, 4, 5];
