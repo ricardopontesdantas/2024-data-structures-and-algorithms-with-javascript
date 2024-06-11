@@ -62,6 +62,22 @@ function findMinValue(array) {
   return min;
 }
 
+const DOES_NOT_EXIST = -1;
+
+function lesserOrEquals(a, b, compareFn) {
+  const comp = compareFn(a, b);
+  return comp === Compare.LESS_THAN || comp === Compare.EQUALS;
+}
+
+function biggerOrEquals(a, b, compareFn) {
+  const comp = compareFn(a, b);
+  return comp === Compare.BIGGER_THAN || comp === Compare.EQUALS;
+}
+
+function defaultDiff(a, b) {
+  return Number(a) - Number(b);
+}
+
 module.exports = {
   defaultEquals,
   defaultToString,
@@ -73,4 +89,8 @@ module.exports = {
   createNonSortedArray,
   findMaxValue,
   findMinValue,
+  lesserOrEquals,
+  biggerOrEquals,
+  DOES_NOT_EXIST,
+  defaultDiff,
 };
