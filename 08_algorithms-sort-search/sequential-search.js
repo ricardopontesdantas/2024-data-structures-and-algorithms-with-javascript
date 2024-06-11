@@ -1,6 +1,4 @@
-const { defaultEquals } = require("../util");
-
-const DOES_NOT_EXIST = -1;
+const { defaultEquals, DOES_NOT_EXIST } = require("../util");
 
 function sequentialSearch(array, value, equalsFn = defaultEquals) {
   for (let i = 0; i < array.length; i++) {
